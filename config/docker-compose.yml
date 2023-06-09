@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:80  # Привязка порта 80 на хосте к порту 80 контейнера Nginx
+    volumes:
+      - .:/code
